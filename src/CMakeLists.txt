@@ -1121,6 +1121,8 @@ if (CMAKE_MAJOR_VERSION VERSION_EQUAL 3 AND CMAKE_MINOR_VERSION VERSION_GREATER 
   include(CheckSymbolExists)
 endif(CMAKE_MAJOR_VERSION VERSION_EQUAL 3 AND CMAKE_MINOR_VERSION VERSION_GREATER 14)
 check_symbol_exists(urcu_ref_get_unless_zero urcu/ref.h HAVE_URCU_REF_GET_UNLESS_ZERO)
+check_symbol_exists(strlcat "string.h" HAVE_STRLCAT)
+check_symbol_exists(strlcpy "string.h" HAVE_STRLCPY)
 
 # All the plumbing in the basement
 set(SYSTEM_LIBRARIES

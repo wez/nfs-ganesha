@@ -17,6 +17,9 @@
 #define FSAL_MODULE_LOC "@FSAL_DESTINATION@"
 /* Build controls */
 
+#cmakedefine HAVE_STRLCPY 1
+#cmakedefine HAVE_STRLCAT 1
+
 #cmakedefine _MSPAC_SUPPORT 1
 #cmakedefine USE_NFSIDMAP 1
 #cmakedefine USE_DBUS 1
