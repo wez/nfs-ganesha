@@ -29,7 +29,7 @@ if(NTIRPC_PREFIX)
 	message("NTIRPC_INCLUDE_DIR ${NTIRPC_INCLUDE_DIR}")
 
 	find_path(NTIRPC_LIBRARY_DIR
-    NAMES libntirpc.so
+    NAMES libntirpc.so libntirpc.dylib
 		PATHS ${NTIRPC_PREFIX}
     PATH_SUFFIXES lib/${CMAKE_LIBRARY_ARCHITECTURE} lib lib64
     NO_DEFAULT_PATH
@@ -46,7 +46,7 @@ endif (NOT NTIRPC_INCLUDE_DIR)
 
 if (NOT NTIRPC_LIBRARY_DIR)
 	find_path(NTIRPC_LIBRARY_DIR
-    NAMES libntirpc.so
+    NAMES libntirpc.so libntirpc.dylib
 		PATHS ${NTIRPC_PREFIX}
     PATH_SUFFIXES lib/${CMAKE_LIBRARY_ARCHITECTURE} lib lib64
 		DOC "The NTIRPC libraries")
